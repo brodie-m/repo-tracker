@@ -2,7 +2,7 @@ const initialState = {
     username: "", results: ""
 }
 
-export default (state = initialState, { type, payload }) => {
+const resultsReducer = (state = initialState, { type, payload }) => {
     switch (type) {
 
     case 'LOAD_RESULT':
@@ -12,3 +12,4 @@ export default (state = initialState, { type, payload }) => {
         return state
     }
 }
+export default resultsReducer
