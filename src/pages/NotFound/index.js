@@ -10,9 +10,10 @@ const NotFound = () => {
         <Sidebar/>
         <CustomNav/>
 
-        <Container>
-        <h1>error 404: not found</h1>
+        <Container className='text-white mt-4 text-xl'>
 
+        <h1>Error 404: Page not found</h1>
+        <h2>Want to go <a href='./'>home</a> instead?</h2>
         </Container>
         </>
     )
