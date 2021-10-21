@@ -5,6 +5,7 @@ export default function InputForm({getResult, results}) {
   
     useEffect(() => {
       const lastSearch = localStorage.getItem('lastSearch')
+      if(!lastSearch) {localStorage.setItem('lastSearch','brodie-m')}
       getResult(lastSearch)
     }, [])
     
