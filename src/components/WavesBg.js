@@ -9,7 +9,7 @@ const WavesBg = () => {
     function morphing() {
         const options =  { 
             easing: 'easingCubicInOut', 
-            yoyo: true, repeat: 20, duration: 2500}
+            yoyo: true, repeat: 20, duration: 10000}
         KUTE.fromTo('#path1', {path: '#path1' }, { path: '#path7' }, options).start();
         KUTE.fromTo('#path2', {path: '#path2' }, { path: '#path8' }, options).start();
         KUTE.fromTo('#path3', {path: '#path3' }, { path: '#path9' }, options).start();
@@ -26,7 +26,7 @@ const WavesBg = () => {
         <filter id="blur1" x="-10%" y="-10%" width="120%" height="120%">
             <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur"></feGaussianBlur>
+            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"></feGaussianBlur>
         </filter>
     </defs>
     <g filter="url(#blur1)">
@@ -45,7 +45,7 @@ const WavesBg = () => {
         
         <path id='path7' style={{visibility: 'hidden'}}
           d="M0 121L120 181L240 205L360 205L480 61L600 85L720 85L840 193L960 49L1080 37L1200 157L1320 97L1440 193L1560 193L1680 121L1800 145L1800 0L1680 0L1560 0L1440 0L1320 0L1200 0L1080 0L960 0L840 0L720 0L600 0L480 0L360 0L240 0L120 0L0 0Z"
-          fill="#202225"
+          fill="#252220"
         ></path>
         <path  id='path8'style={{visibility: 'hidden'}}
           d="M0 301L120 253L240 325L360 385L480 121L600 229L720 265L840 337L960 157L1080 73L1200 205L1320 217L1440 253L1560 337L1680 277L1800 181L1800 143L1680 119L1560 191L1440 191L1320 95L1200 155L1080 35L960 47L840 191L720 83L600 83L480 59L360 203L240 203L120 179L0 119Z"
