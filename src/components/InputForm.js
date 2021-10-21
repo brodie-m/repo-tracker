@@ -22,7 +22,7 @@ export default function InputForm({getResult, results}) {
             no one will ever know who you're stalking this time
           </Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit"  onClick = {handleSubmit}>
+        <Button type="submit"  onClick = {handleSubmit} className='form-button'>
           search
         </Button>
       </Form>

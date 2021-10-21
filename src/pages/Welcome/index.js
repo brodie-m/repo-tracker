@@ -1,9 +1,11 @@
 import React from 'react'
 import CustomNav from '../../components/CustomNav'
 import { Container } from 'react-bootstrap'
+import Sidebar from '../../components/Sidebar'
 export default function index() {
     return (
         <div>
+            <Sidebar/>
             <CustomNav/>
             <Container className = 'd-flex justify-content-center flex-column mt-5 text-white'>
 
