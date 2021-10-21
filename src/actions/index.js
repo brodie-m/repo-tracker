@@ -24,3 +24,4 @@ const fetchGitRepo = async searchTerm => {
         throw new Error(err.message)
     }
 }
+
