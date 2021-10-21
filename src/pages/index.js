@@ -1,2 +1,5 @@
 export {default as Welcome} from './Welcome'
 export {default as Repos} from './Repos'
+export {default as Contact} from './Contact'
+export {default as About} from './About'
+export {default as NotFound} from './NotFound'

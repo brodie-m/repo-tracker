@@ -1,5 +1,5 @@
 import React from "react";
-import { Welcome, Repos } from "./pages";
+import { Welcome, Repos, About, Contact, NotFound } from "./pages";
 import { Route, Switch } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
@@ -8,11 +8,20 @@ function App() {
     <Switch>
     
     <Route path = '/' exact>
-      <Sidebar/>
+      
       <Welcome/>
     </Route>
     <Route path = '/repos' exact>
       <Repos/>
+    </Route>
+    <Route path = '/about' exact>
+      <About/>
+    </Route>
+    <Route path = '/contact' exact>
+      <Contact/>
+    </Route>
+    <Route path = '*' exact>
+      <NotFound/>
     </Route>
 
       
