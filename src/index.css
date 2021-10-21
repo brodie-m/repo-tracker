@@ -9,6 +9,7 @@
     hover:cursor-pointer
     rounded-3xl hover:rounded-xl
     transition-all duration-300 ease-linear;
+    animation: 10s hue-rotate infinite ease;
 
 
   }
