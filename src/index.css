@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.list-group-item {
+  padding: 1rem;
+  margin: 0px 10px;
+  border: 0px solid transparent;
+  background-color: #171a1d
+}
+
+.list-group-item h3:hover {
+  cursor: pointer;
+}
+
+.card {
+  background-color: #282b2e
+}
