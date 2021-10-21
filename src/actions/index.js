@@ -7,7 +7,6 @@ export const getResult = (username) => {
     return async (dispatch) => {
       try {
         const results = await fetchGitRepo(username);
-        console.log(username)
         await dispatch(loadResult(results, username));
       } catch (err) {
         console.warn(err.message);

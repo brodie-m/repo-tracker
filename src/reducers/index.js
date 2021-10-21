@@ -1,5 +1,5 @@
 const initialState = {
-    username: "hello-world", results: []
+    username: "", results: []
 }
 
 const resultsReducer = (state = initialState, { type, payload }) => {

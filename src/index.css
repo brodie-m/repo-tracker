@@ -16,7 +16,8 @@ code {
   padding: 1rem;
   margin: 0px 10px;
   border: 0px solid transparent;
-  background-color: #171a1d
+  background-color: #171a1d;
+  text-align: center;
 }
 
 .list-group-item h3:hover {

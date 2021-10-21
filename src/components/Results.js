@@ -7,7 +7,6 @@ export default function Results() {
   const username = useSelector((state) => state.username);
   const [show, setShow] = useState(false);
   const [activeRepo, setActiveRepo] = useState(null);
-  console.log(activeRepo)
   const renderModal = (repo) => (
     <Modal
       className="d-flex align-items-center justify-content-center"
@@ -44,12 +43,12 @@ export default function Results() {
 
   return (
     <Container className="text-white mt-2">
-      <h1>user: {username}</h1>
-      <ListGroup className="dark-bg">
+      {username ? <h1>user: {username}</h1> : ''}
+      <ListGroup className="dark-bg ">
         {results.map((repo, index) => {
           return (
             <>
-              <ListGroup.Item key={index}>
+              <ListGroup.Item key={index} >
                 <Card className="text-white">
                   <h3
                     onClick={() => {
