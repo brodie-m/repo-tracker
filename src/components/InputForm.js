@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Form, Button } from "react-bootstrap";
 import Results from "./Results";
 export default function InputForm({getResult, results}) {
   
-    
+    useEffect(() => {
+      const lastSearch = localStorage.getItem('lastSearch')
+      getResult(lastSearch)
+    }, [])
     
     function handleSubmit(e) {
         e.preventDefault();
         const input = document.getElementById('search-form');
         const username = input.value
+        localStorage.setItem('lastSearch',username)
         getResult(username)
     }
     

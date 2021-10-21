@@ -17,7 +17,7 @@
     rounded-md shadow-md
     text-white bg-gray-900
     text-xs font-bold
-    transition-all duration-100 scale-0 origin-left;
+    transition-all duration-100 scale-0 origin-left z-10;
   }
   .form-button {
     @apply border-none bg-gray-800 text-green-500
@@ -29,6 +29,17 @@
     @apply bg-gray-500 text-white placeholder-gray-100 border-none
     focus:bg-green-900 focus:shadow-none focus:text-white
     transition-all duration-300 ease-linear;
+  }
+  #bg {
+    position: fixed;
+    opacity: 0.1;
+    z-index: -2;
+  }
+  .list-group {
+    z-index: 0;
+  }
+  .sidebar-tooltip {
+    z-index: 10;
   }
 }
 body {
@@ -53,6 +64,7 @@ code {
   border: 0px solid transparent;
   background-color: #171a1d;
   text-align: center;
+  z-index: 0;
 }
 
 .list-group-item h3:hover {

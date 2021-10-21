@@ -45,7 +45,9 @@ export default function Results() {
     <Container className="text-white mt-2">
       {username ? <h1>user: {username}</h1> : ''}
       <ListGroup className="dark-bg ">
-        {results.map((repo, index) => {
+        {results[0] ? results.map((repo, index) => {
+          console.log(repo)
+          
           return (
             <>
               <ListGroup.Item key={index} >
@@ -62,7 +64,8 @@ export default function Results() {
               </ListGroup.Item>
             </>
           );
-        })}
+        }):<div>error: no results found</div>}
+        
       </ListGroup>
       {show ? renderModal(activeRepo) : null}
     </Container>

@@ -6,7 +6,10 @@ const Sidebar = () => {
 
     return (
         <div className='fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-900 text-white shadow-lg'>
-            <SideBarIcon icon={<FaFire size ='28'/>} />
+            <br/>
+            <br/>
+            <br/>
+            
             <SideBarIcon text='home'  href='./'icon={<FaHome size='28'/>}/>
             <SideBarIcon text='search page'  href='./repos'icon={<FaSearch size='28'/>}/>
             <SideBarIcon text='about' href='./about' icon={<FaQuestion size ='28'/>}/>
@@ -15,7 +18,7 @@ const Sidebar = () => {
         </div>
     )
 }
-const SideBarIcon = ({icon, text='tooltip', onClick, href}) => (
+const SideBarIcon = ({icon, text='tooltip', href}) => (
     <div className = 'sidebar-icon group' >
         
         <div onClick={() => window.location.href=`${href}`}>
