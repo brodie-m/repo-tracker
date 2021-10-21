@@ -1,18 +1,15 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import { getResult } from "../actions";
 import Results from "./Results";
-export default function InputForm() {
-
+export default function InputForm({getResult, results}) {
+  
     
     
     function handleSubmit(e) {
         e.preventDefault();
         const input = document.getElementById('search-form');
         const username = input.value
-        const result = username => getResult(username)
-        console.log(result(username))
-        return result
+        getResult(username)
     }
     
   return (
@@ -29,7 +26,7 @@ export default function InputForm() {
           search
         </Button>
       </Form>
-      <Results />
+      <Results results={[...results]}/>
     </div>
   );
 }

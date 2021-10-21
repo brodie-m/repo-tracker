@@ -1,20 +1,19 @@
-const loadResult = (results) => ({
+const loadResult = (results, username) => ({
     type: 'LOAD_RESULT',
-    payload:  results
+    payload: {results: results, username: username}
 });
 
-export const getResult = searchTerm => {
-    console.log('i have been called with',searchTerm)
-    return async dispatch => {
-        try{
-            const data = await fetchGitRepo(searchTerm)
-            console.log(data)
-            dispatch(loadResult(data))
-        } catch (err) {
-            console.warn(err.message)
-        }
-    }
-}
+export const getResult = (username) => {
+    return async (dispatch) => {
+      try {
+        const results = await fetchGitRepo(username);
+        console.log(username)
+        await dispatch(loadResult(results, username));
+      } catch (err) {
+        console.warn(err.message);
+      }
+    };
+  };
 
 const fetchGitRepo = async searchTerm => {
     try {

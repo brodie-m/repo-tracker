@@ -6,7 +6,7 @@ export default function Results() {
 
   const results = useSelector((state) => state.results);
   const username = useSelector((state) => state.username);
-
+  console.log(results)
   
 
   return (
@@ -14,7 +14,7 @@ export default function Results() {
       <h1>user: {username}</h1>
       <ListGroup>
         {results.map((repo, index) => {
-            return (<ListGroup.Item key={index}>{repo}</ListGroup.Item>)
+            return (<ListGroup.Item key={index}>{repo.name}</ListGroup.Item>)
           
         })}
       </ListGroup>
